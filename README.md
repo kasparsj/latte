@@ -1,5 +1,7 @@
 # AnnotateCms Latte #
 
+[![Latest Stable Version](https://poser.pugx.org/annotatecms/latte/v/stable.png)](https://packagist.org/packages/annotatecms/latte) [![Total Downloads](https://poser.pugx.org/annotatecms/latte/downloads.png)](https://packagist.org/packages/annotatecms/latte)
+
 AnnotateCms Latte is integration of [Latte](https://github.com/nette/latte "Latte Github page") templating engine into Laravel Framework.
 
 ## Installation ##
