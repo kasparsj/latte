@@ -2,7 +2,7 @@
 
 return array(
     "filters" => array(
-        "Nette\\Latte\\Engine",
+        "Annotatecms\\Latte\\OverrideMacros"
     ),
     "helpers" => array(
         "Nette\\Templating\\Helpers::loader",

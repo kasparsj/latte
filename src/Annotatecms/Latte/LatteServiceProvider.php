@@ -12,6 +12,10 @@ class LatteServiceProvider extends ServiceProvider {
      */
     protected $defer = FALSE;
 
+    public function boot() {
+        $this->package("annotatecms/latte");
+    }
+
     /**
      * Register the service provider.
      *
