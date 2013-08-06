@@ -29,7 +29,7 @@ class Engine implements EngineInterface {
 
         $cacheDirectory = \Config::get("latte::latte.cacheDirectory");
 
-//        $template->setCacheStorage(new PhpFileStorage($cacheDirectory));
+        $template->setCacheStorage(new PhpFileStorage($cacheDirectory));
 
         $latte = new \Nette\Latte\Engine();
         $template->registerFilter($latte);
