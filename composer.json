@@ -1,7 +1,7 @@
 {
     "name": "annotatecms/latte",
     "description": "Latte templating engine from Nette Framework integrated into Laravel Framework",
-    "keywords": ["annotatecms", "laravel"],
+    "keywords": ["annotatecms", "laravel", "templating", "latte"],
 	"license" : "MIT",
     "authors": [
         {
