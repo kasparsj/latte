@@ -4,6 +4,8 @@
 
 AnnotateCms Latte is integration of [Latte](https://github.com/nette/latte "Latte Github page") templating engine into Laravel Framework.
 
+To learn Latte Templating engine please refer to [Nette Framework's page](http://doc.nette.org/en/templating)
+
 ## Installation ##
 Install via composer into Laravel Framework's project. Add this into your composer.json file:	
 
@@ -84,7 +86,6 @@ Below are macros, which are not functional or tested yet. I will consider adding
 - dump
 - debugbreak
 - snippet
-- Blocks, layouts, template inheritance - not fully tested yet
 
 ## Future plans ##
 Consider dependency on whole nette/nette package. Maybe it could be posible to depend on latte/latte only.
