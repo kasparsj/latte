@@ -22,6 +22,11 @@ class LatteServiceProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
+
+        \App::bind("latte", function(){
+            return new Latte();
+        });
+
         \View::addExtension("latte", "latte", function () {
             return new Engine;
         });
@@ -33,7 +38,9 @@ class LatteServiceProvider extends ServiceProvider {
      * @return array
      */
     public function provides() {
-        return array();
+        return array(
+            "latte"
+        );
     }
 
 }

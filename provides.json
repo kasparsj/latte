@@ -1,0 +1,11 @@
+{
+    "providers" : [
+        "Annotatecms\\Latte\\LatteServiceProvider"
+    ],
+    "aliases" :   [
+        {
+            "alias" :  "Latte",
+            "facade" : "Annotatecms\\Latte\\Facades\\Latte"
+        }
+    ]
+}

@@ -8,7 +8,6 @@ namespace Annotatecms\Latte;
 use Nette\Latte\Compiler;
 use Nette\Latte\MacroNode;
 use Nette\Latte\Macros\MacroSet;
-use Nette\Latte;
 use Nette\Latte\PhpWriter;
 
 /**
@@ -19,7 +18,7 @@ use Nette\Latte\PhpWriter;
  */
 class OverrideMacros extends MacroSet {
 
-    public static function install(Latte\Compiler $compiler) {
+    public static function install(\Nette\Latte\Compiler $compiler) {
         $me = parent::install($compiler);
 
         // routes and links generation
@@ -27,6 +26,9 @@ class OverrideMacros extends MacroSet {
         $me->addMacro('href', NULL, NULL, function (MacroNode $node, PhpWriter $writer) use ($me) {
             return ' ?> href="<?php ' . $me->macroLink($node, $writer) . ' ?>"<?php ';
         });
+
+        // component model
+        $me->addMacro("control", array($me, "macroControl"));
 
         // form macros
         $me->addMacro("link", array($me, "macroLink"));
@@ -70,6 +72,10 @@ class OverrideMacros extends MacroSet {
             return $writer->write("echo \\URL::to(%node.word, %node.array?)");
         }
 
+    }
+
+    public function macroControl(MacroNode $node, PhpWriter $writer) {
+        return $writer->write("\\ComponentManager::make(%node.word)->render();");
     }
 
     public function macroForm(MacroNode $node, PhpWriter $writer) {
