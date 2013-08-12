@@ -7,6 +7,14 @@ AnnotateCms Latte is integration of [Latte](https://github.com/nette/latte "Latt
 To learn Latte Templating engine please refer to [Nette Framework's page](http://doc.nette.org/en/templating)
 
 ## Installation ##
+
+### Via rtablada/package-installer ###
+Since version 2.0.2 you can use [rtablada/package-installer(https://github.com/rtablada/package-installer)]:
+
+	artisan package:install annotatecms/latte
+	
+
+### Via composer ###
 Install via composer into Laravel Framework's project. Add this into your composer.json file:	
 
 	"annotatecms/latte" : "2.*"
