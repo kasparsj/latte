@@ -9,7 +9,7 @@ To learn Latte Templating engine please refer to [Nette Framework's page](http:/
 ## Installation ##
 
 ### Via rtablada/package-installer ###
-Since version 2.0.2 you can use [rtablada/package-installer(https://github.com/rtablada/package-installer)]:
+Since version 2.0.2 you can use [rtablada/package-installer](https://github.com/rtablada/package-installer):
 
 	artisan package:install annotatecms/latte
 	
