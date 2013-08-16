@@ -13,7 +13,7 @@ class LatteServiceProvider extends ServiceProvider {
     protected $defer = FALSE;
 
     public function boot() {
-        $this->package("annotatecms/latte");
+        $this->package("annotatecms/latte", "annotatecms/latte");
     }
 
     /**
@@ -22,8 +22,7 @@ class LatteServiceProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
-
-        \App::bind("latte", function(){
+        $this->app["annotate.latte"] = $this->app->share(function ($app) {
             return new Latte();
         });
 
@@ -31,16 +30,4 @@ class LatteServiceProvider extends ServiceProvider {
             return new Engine;
         });
     }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides() {
-        return array(
-            "latte"
-        );
-    }
-
 }

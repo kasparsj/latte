@@ -21,10 +21,11 @@ class Latte {
         $template = new FileTemplate($path);
         $template->setParameters($data);
 
-        $filters = \Config::get("latte::latte.filters", array());
-        $helpers = \Config::get("latte::latte.helpers", array());
+        $config = \Config::get("annotatecms/latte::latte");
 
-        $cacheDirectory = \Config::get("latte::latte.cacheDirectory");
+        $filters = $config["filters"];
+        $helpers = $config["helpers"];
+        $cacheDirectory = $config["cacheDirectory"];
 
         $template->setCacheStorage(new PhpFileStorage($cacheDirectory));
 

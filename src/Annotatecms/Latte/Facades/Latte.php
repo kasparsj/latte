@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Facade;
 class Latte extends Facade {
 
     protected static function getFacadeAccessor() {
-        return "latte";
+        return "annotate.latte";
     }
 
 }

@@ -14,7 +14,6 @@ use Nette\Latte\PhpWriter;
  * Class OverrideMacros
  *
  * @package Annotatecms\Latte
- * @todo    add these macros: cache, contentType, status
  */
 class OverrideMacros extends MacroSet {
 
