@@ -21,13 +21,17 @@ Install via composer into Laravel Framework's project. Add this into your compos
 
 After updating composer, add the ServiceProvider to the providers array in app/config/app.php
 
-	'Annotatecms\Debugger\LatteServiceProvider',
+	'Annotatecms\Latte\LatteServiceProvider',
 
 Publish configuration via Artisan command:
 
 	php artisan config:publish annotatecms/latte
 
 Now you can use "latte" files as you view files.
+
+Optionally you can add alias into your /app/config/app.php:
+	
+	'Latte' => 'Annotatecms\Latte\Facades\Latte'
 
 ## Configuration ##
 
@@ -54,8 +58,8 @@ Usage:
 	{/ifCurrent}
 
 - href, link
-	- href is n:macro - usage <a n:href="HomeController@getIndex">Home</a>
-	- link usage: <a href="{link HomeController@getIndex}">Home</a>
+	- href is n:macro - usage `<a n:href="HomeController@getIndex">Home</a>`
+	- link usage: `<a href="{link HomeController@getIndex}">Home</a>`
 	- functionally are both variants same
 	- could be used with route url: /user/5 (you can ommit leading slash)
 	- also could be used with controller action: HomeController@getIndex
@@ -79,9 +83,9 @@ Usage:
 
 #### Usage of form macros ####
 
-	{form HomeController@postLogin}
+	{form "HomeController@postLogin"}
 		{label "login", "Login", class=>"form-label", title=>"Some title"} {input text, "login", "Default Value"}
-		{label "password", "Password"} {input password}		
+		{label "password", "Password"} {input password, "password"}		
 		{input submit, "Click me!"}
 	{/form}
  
