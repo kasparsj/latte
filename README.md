@@ -59,7 +59,7 @@ Usage:
 
 - href, link
 	- href is n:macro - usage `<a n:href="HomeController@getIndex">Home</a>`
-	- link usage: `<a href="{link HomeController@getIndex}">Home</a>`
+	- link usage: `<a href="{link "HomeController@getIndex"}">Home</a>`
 	- functionally are both variants same
 	- could be used with route url: /user/5 (you can ommit leading slash)
 	- also could be used with controller action: HomeController@getIndex
